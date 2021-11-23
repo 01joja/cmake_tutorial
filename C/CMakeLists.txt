@@ -14,6 +14,10 @@ add_subdirectory(test)
 # This adds the C_sub to known folders and specifys where it should be saved in the build.
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../C_sub ${CMAKE_CURRENT_BINARY_DIR}/C_sub)
 
+# Becouse it is not a real subdirectory we need to specify where it should be saved.
+# !OBS! If another subdirectory has the same name there will be a conflict.
+# See stackoverflow -- https://stackoverflow.com/questions/7980784/cmake-add-sub-directory-which-is-not-sub-directory-on-real-directory
+
 # add the executable file
 add_executable(Test main.cpp)
 

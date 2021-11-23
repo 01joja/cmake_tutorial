@@ -9,3 +9,8 @@ This is a short example of a small C++ project that uses CMake.
 [Config guide](https://code.visualstudio.com/docs/cpp/cmake-linux)
 
 On windows. Make sure that you have added the path to _cmake.exe_.
+
+## CMake
+
+Open all the CMakeLists.txt and look at them. The CMakeList.txt in
+the C folder is the head.
