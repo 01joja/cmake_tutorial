@@ -17,16 +17,23 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../C_sub ${CMAKE_CURRENT_BINARY_DIR
 # add the executable file
 add_executable(Test main.cpp)
 
+# ------------------------------------
+
 # Adds the libary test from the test/CMakeLists.txt
 target_link_libraries(Test PUBLIC test)
 
 # Adds the libary test2 from the ../C_sub/CMakeLists.txt
 target_link_libraries(Test PUBLIC test2)
 
-target_include_directories(Test PUBLIC
-                          "${PROJECT_BINARY_DIR}"
-                          "${PROJECT_SOURCE_DIR}/test"
-                          "${PROJECT_SOURCE_DIR}../C_sub" 
-                          )
+# ------------------------------------
 
-                          
+# Above is the same as below
+
+# ------------------------------------
+
+# You can add everything in one line like this:
+target_link_libraries(Test PUBLIC test test2)
+
+# ------------------------------------
+
+
